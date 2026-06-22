@@ -1,1 +1,4 @@
 vendor/
+.env
+config/mail_config.php
+tests/test_mail.php
