@@ -74,8 +74,8 @@ $rootPath   = '';
         <div class="page-header-left">
           <div class="page-title">Browse Found Items</div>
           <div class="page-sub">
-            🤝 <strong>Peer</strong> items are handled directly with the finder.
-            🔒 <strong>Admin</strong> items (Electronics, IDs, Keys) require staff verification.
+             <strong>Peer</strong> items are handled directly with the finder.
+             <strong>Admin</strong> items (Electronics, IDs, Keys) require staff verification.
           </div>
         </div>
       </div>
@@ -138,14 +138,14 @@ $rootPath   = '';
           <div class="card-body-area">
             <div class="card-item-title"><?= htmlspecialchars($it['item_name']) ?></div>
             <div class="d-flex flex-wrap gap-1 mb-1">
-              <span class="tag tag-loc">📍 <?= htmlspecialchars($it['location_found']) ?></span>
+              <span class="tag tag-loc"> <?= htmlspecialchars($it['location_found']) ?></span>
               <span class="tag tag-date"><?= date('M j, Y', strtotime($it['created_at'])) ?></span>
             </div>
             <div class="d-flex gap-1 mb-2">
               <span class="badge badge-<?= $it['status'] ?>"><?= ucfirst($it['status']) ?></span>
               <?php if ($it['status'] === 'available'): ?>
               <span class="flow-tag <?= $isPeer ? 'flow-peer' : 'flow-admin' ?>">
-                <?= $isPeer ? '🤝 Peer' : '🔒 Admin' ?>
+                <?= $isPeer ? ' Peer' : ' Admin' ?>
               </span>
               <?php endif; ?>
             </div>
@@ -159,7 +159,7 @@ $rootPath   = '';
               <a href="claim_modal.php?item_id=<?= $it['item_id'] ?>"
                  class="btn-gold" style="font-size:11px;padding:4px 10px;"
                  onclick="event.stopPropagation();">
-                <?= $isPeer ? '🤝 Claim' : '🔒 Claim' ?>
+                <?= $isPeer ? ' Claim' : ' Claim' ?>
               </a>
               <?php endif; ?>
             </div>
@@ -247,7 +247,7 @@ function openModal(id) {
   if (!IS_ADMIN && it.status === 'available') {
     btn.style.display = '';
     btn.href          = `claim_modal.php?item_id=${it.id}`;
-    btn.textContent   = isPeer ? '🤝 Claim This Item' : '🔒 Claim This Item';
+    btn.textContent   = isPeer ? ' Claim This Item' : ' Claim This Item';
   } else {
     btn.style.display = 'none';
   }

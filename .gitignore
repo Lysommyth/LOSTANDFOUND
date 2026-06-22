@@ -1,4 +1,6 @@
 vendor/
+uploads/*
 .env
 config/mail_config.php
 tests/test_mail.php
+!uploads/.gitkeep
