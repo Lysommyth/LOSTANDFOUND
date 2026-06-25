@@ -159,7 +159,7 @@ $rootPath   = '';
                 <div class="d-flex gap-2 flex-wrap align-items-center">
                   <span class="badge badge-<?= $item['status'] ?>"><?= ucfirst($item['status']) ?></span>
                   <span class="flow-tag <?= $isPeer ? 'flow-peer' : 'flow-admin' ?>">
-                    <?= $isPeer ? '🤝 Peer' : '🔒 Admin' ?>
+                    <?= $isPeer ? ' Peer' : '🔒 Admin' ?>
                   </span>
                 </div>
                 <div style="margin-top:10px;font-size:12px;color:var(--text-muted);">

@@ -146,7 +146,7 @@ $rootPath   = '';
             <div class="item-preview-title"><?= htmlspecialchars($item['item_name']) ?></div>
             <div class="item-preview-meta">
               📂 <?= htmlspecialchars($item['category']) ?>
-              &nbsp;·&nbsp; 📍 <?= htmlspecialchars($item['location_found']) ?>
+              &nbsp;·&nbsp;  <?= htmlspecialchars($item['location_found']) ?>
               &nbsp;·&nbsp; 🗓 <?= date('M j, Y', strtotime($item['created_at'])) ?>
             </div>
             <div style="font-size:12px;color:var(--text-main);"><?= htmlspecialchars($item['description']) ?></div>
@@ -164,7 +164,7 @@ $rootPath   = '';
 
           <!-- FLOW BADGE -->
           <?php if ($isPeerToPeer): ?>
-            <div class="flow-badge flow-peer">🤝 Peer-to-Peer Exchange</div>
+            <div class="flow-badge flow-peer"> Peer-to-Peer Exchange</div>
             <div class="flow-info peer">
               <strong>How this works:</strong>
               <div class="steps">
@@ -176,7 +176,7 @@ $rootPath   = '';
               </div>
             </div>
           <?php else: ?>
-            <div class="flow-badge flow-admin">🔒 Admin Verified Claim</div>
+            <div class="flow-badge flow-admin"> Admin Verified Claim</div>
             <div class="flow-info admin">
               <strong>How this works:</strong>
               <div class="steps">
@@ -227,7 +227,7 @@ For high-value items, be very specific — serial number, purchase receipt detai
                 <?php endif; ?>
 
                 <button type="submit" class="btn-gold w-100" style="justify-content:center;padding:12px;font-size:14px;">
-                  <?= $isPeerToPeer ? '🤝 Submit Claim to Finder' : '🔒 Submit Claim to Admin' ?>
+                  <?= $isPeerToPeer ? ' Submit Claim to Finder' : ' Submit Claim to Admin' ?>
                 </button>
               </form>
             </div>
